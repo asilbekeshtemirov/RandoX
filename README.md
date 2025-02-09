@@ -1,0 +1,2 @@
+# RandoX
+Random number search

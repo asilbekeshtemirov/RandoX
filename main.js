@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   let secretNumber = Math.floor(Math.random() * 100) + 1;
-  console.log(secretNumber);
-  
   let attempts = 7;
   const message = document.querySelector(".box__note--text");
   const numberDisplay = document.querySelector(".box--items-number");

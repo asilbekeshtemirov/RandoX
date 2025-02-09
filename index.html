@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is a sample project for guessing auto generated number and finding it" >
+    <meta name="author" content="Abdulkhamidov Abrorbek">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Guess-my-number</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="box">
+        <h1 class="box__title">Guess my number!</h1>
+        <p class="box__limit--text">Number of guesses: 7</p>
+        <div class="box--items">
+          <hr style="border: 5px solid #ffd700; width: 100%" />
+          <p class="box--items-number">?</p>
+        </div>
+        <p class="box__note--text">Start guessing...</p>
+
+        <form class="box__actions">
+          <input
+            type="text"
+            id="user-guess"
+            name="key"
+            pattern="\d*"
+            inputmode="numeric" 
+            maxlength="2"
+            size="2"
+            placeholder="..."
+          />
+
+          <p class="box__actions--range--text">(Guess between 1 to 100!)</p>
+          <div class="box__actions--buttons">
+            <button
+              type="submit"
+              class="box__actions--guess--button"
+              id="guess-btn"
+            >
+              Guess!
+            </button>
+            <button type="button" class="box__actions--retry--button">Try again!</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

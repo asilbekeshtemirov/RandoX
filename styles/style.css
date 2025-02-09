@@ -1,0 +1,253 @@
+@font-face {
+  font-family: "Jersey20";
+  src: url("../public/fonts/Jersey20-Regular.woff2") format("woff2"),
+    url("../public/fonts/Jersey20-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg-color: #8711c1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: Jersey20, sans-serif;
+}
+.box {
+  text-align: center;
+  margin-top: 60px;
+}
+.box__title {
+  font-family: Jersey20, sans-serif;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 96px;
+  color: #ffffff;
+}
+.box__limit--text {
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #ffd700;
+}
+.box--items {
+  position: relative;
+  display: flex;
+  margin-top: 80px;
+  justify-content: center;
+}
+.box--items p {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: -50px;
+  font-family: Jersey20, sans-serif;
+  font-size: 96px;
+  color: #8711c1;
+  background-color: #ffd700;
+  border-radius: 12px;
+  padding: 12px;
+}
+.box__note--text {
+  margin-top: 80px;
+  color: #ffd700;
+  font-size: 40px;
+}
+.box__actions {
+  padding: 20px 52px;
+}
+#user-guess::placeholder {
+  font-size: 22px;
+  color: #8711c1;
+}
+.box__actions input {
+  text-align: center;
+  border-radius: 10px;
+  font-family: Jersey20, sans-serif;
+  font-size: 64px;
+  color: #8711c1;
+
+  border: none;
+  padding: 9px;
+}
+
+.box__actions--range--text {
+  font-size: 32px;
+  color: #ffd700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.box__actions--buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.box__actions button {
+  height: 78px;
+  border-radius: 10px;
+  padding: 15px 24px 15px 24px;
+  font-family: Jersey20, sans-serif;
+  font-size: 48px;
+  color: #8711c1;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box__actions--guess--button:hover {
+  background-color: #ffd700;
+  transform: scale(1.03);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.box__actions--retry--button:hover {
+  background-color: #ffd700;
+  transform: scale(1.03);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.box__actions--guess--button:active {
+  background-color: #ffd900e9;
+  transform: scale(1);
+}
+.box__actions--retry--button:active {
+  background-color: #ffd900e9;
+  transform: scale(1);
+}
+
+.box__actions--range--text {
+  font-size: 32px;
+  line-height: 32px;
+}
+
+@keyframes pulseAndFlash {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.btnAction {
+  animation: pulseAndFlash 1.5s infinite ease-in-out;
+}
+
+
+/* @media screen and (max-width: 768px) {
+  .box {
+    margin-top: 30px;
+  }
+  .box__title {
+    font-family: Jersey20, sans-serif;
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .box__limit--text {
+    margin-top: 12px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+  /* .box--items {
+    position: relative;
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+  } */
+  /* .box--items p {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: -50px;
+    font-family: Jersey20, sans-serif;
+    font-size: 96px;
+    color: #8711c1;
+    background-color: #ffd700;
+    border-radius: 12px;
+    padding: 12px;
+  }
+  .box__note--text {
+    margin-top: 80px;
+    color: #ffd700;
+    font-size: 40px;
+  }
+  .box__actions {
+    padding: 20px 52px;
+  }
+  #user-guess::placeholder {
+    font-size: 22px;
+    color: #8711c1;
+  }
+  .box__actions input {
+    text-align: center;
+    border-radius: 10px;
+    font-family: Jersey20, sans-serif;
+    font-size: 64px;
+    color: #8711c1;
+  
+    border: none;
+    padding: 9px;
+  }
+  
+  .box__actions--range--text {
+    font-size: 32px;
+    color: #ffd700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .box__actions--buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  .box__actions button {
+    height: 78px;
+    border-radius: 10px;
+    padding: 15px 24px 15px 24px;
+    font-family: Jersey20, sans-serif;
+    font-size: 48px;
+    color: #8711c1;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .box__actions--guess--button:hover {
+    background-color: #ffd700;
+    transform: scale(1.03);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .box__actions--retry--button:hover {
+    background-color: #ffd700;
+    transform: scale(1.03);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .box__actions--guess--button:active {
+    background-color: #ffd900e9;
+    transform: scale(1);
+  }
+  .box__actions--retry--button:active {
+    background-color: #ffd900e9;
+    transform: scale(1);
+  }
+  
+  .box__actions--range--text {
+    font-size: 32px;
+    line-height: 32px;
+  } */
+/* } */
